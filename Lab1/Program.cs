@@ -50,12 +50,18 @@ public class Program
         //program.Task_3_9(0.1);
     }
     #region Level 1
-    public int Task_1_1()
+        public int Task_1_1()
     {
         int answer = 0;
 
         // code here
-
+        int s = 0, x = -1;
+        while (x < 35)
+        {
+            x += 3;
+            s += x;
+        }
+        answer = s;
         // end
 
         return answer;
@@ -65,7 +71,13 @@ public class Program
         double answer = 0;
 
         // code here
-
+        double div = 0, s = 1;
+        for (div = 1; div <= 10; div++)
+        {
+            s = 1 / div;
+            answer += s;
+        }
+        answer = Math.Round(answer, 2);
         // end
 
         return answer;
@@ -75,7 +87,12 @@ public class Program
         double answer = 0;
 
         // code here
-
+        double x;
+        for (x = 2; x <= 112; x+=2)
+        {
+            answer += x / (x + 1);
+        }
+        answer = Math.Round(answer);
         // end
 
         return answer;
@@ -85,7 +102,21 @@ public class Program
         double answer = 0;
 
         // code here
-
+        double div = 1;
+        int n;
+        if (x != 0)
+        {
+            for (n = 1; n <= 9; n++)
+            {
+                answer += Math.Cos(n * x) / div;
+                div *= x;
+            }
+            answer = Math.Round(answer, 2);
+        }
+        else
+        {
+            answer = 0;
+        }
         // end
 
         return answer;
@@ -115,7 +146,13 @@ public class Program
         int answer = 0;
 
         // code here
-
+        int x = 1; answer = 1;
+        while (x <= 6)
+        {
+            answer *= x;
+            x++;
+        }
+        Console.WriteLine(answer);
         // end
 
         return answer;
